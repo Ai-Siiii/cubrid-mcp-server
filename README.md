@@ -1,6 +1,6 @@
 <!-- CUBRID-LAB-ICON:START -->
 <p align="center">
-  <a href="https://github.com/cubrid-lab/brand"><img src="https://raw.githubusercontent.com/cubrid-lab/brand/3a385be773af94077c56548a24cdb9313bdc3b5c/dist/icons/cubrid-mcp-server.svg" alt="cubrid-mcp-server icon (CUBRID Lab brand repository)" width="120"></a>
+  <a href="https://github.com/cubrid-lab/brand"><img src="https://raw.githubusercontent.com/cubrid-lab/brand/e55990a6a0b2c3b0d133985951d41e42b62a8588/dist/icons/cubrid-mcp-server.svg" alt="cubrid-mcp-server icon (CUBRID Lab brand repository)" width="120"></a>
 </p>
 <!-- CUBRID-LAB-ICON:END -->
 
@@ -154,6 +154,15 @@ Notes:
   `CUBRID_<NAME>_MCP_READONLY` independently of the default.
 
 ### Run
+
+Check the install without a database:
+
+```bash
+cubrid-mcp-server --help
+cubrid-mcp-server --version
+```
+
+Both flags exit 0 and print to stderr. They do not read `CUBRID_*` or start the MCP loop.
 
 ### Run from PyPI
 

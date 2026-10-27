@@ -1,6 +1,6 @@
 <!-- CUBRID-LAB-ICON:START -->
 <p align="center">
-  <a href="https://github.com/cubrid-lab/brand"><img src="https://raw.githubusercontent.com/cubrid-lab/brand/3a385be773af94077c56548a24cdb9313bdc3b5c/dist/icons/cubrid-mcp-server.svg" alt="cubrid-mcp-server icon (CUBRID Lab brand repository)" width="120"></a>
+  <a href="https://github.com/cubrid-lab/brand"><img src="https://raw.githubusercontent.com/cubrid-lab/brand/e55990a6a0b2c3b0d133985951d41e42b62a8588/dist/icons/cubrid-mcp-server.svg" alt="cubrid-mcp-server icon (CUBRID Lab brand repository)" width="120"></a>
 </p>
 <!-- CUBRID-LAB-ICON:END -->
 
@@ -125,6 +125,15 @@ export CUBRID_REPORTING_MCP_MAX_ROWS=500   # 연결별 선택 튜닝
 참고: 연결 이름은 `[A-Za-z0-9_]+` 형식이며 대소문자를 구분하지 않습니다. `default`는 예약된 이름입니다. 이름 있는 연결은 기본 변수를 상속하지 않으므로 모든 필드를 지정해야 합니다. 연결별로 읽기 전용 강제가 독립적으로 적용됩니다.
 
 ### 실행
+
+데이터베이스 없이 설치를 확인하려면:
+
+```bash
+cubrid-mcp-server --help
+cubrid-mcp-server --version
+```
+
+두 플래그는 종료 코드 0으로 stderr에 출력하며, `CUBRID_*`를 읽거나 MCP 루프를 시작하지 않습니다.
 
 PyPI에서 [`uvx`](https://docs.astral.sh/uv/guides/tools/)로 바로 실행:
 

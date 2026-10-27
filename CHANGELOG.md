@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **CLI `--help` / `--version` without a database (#487)** — `cubrid-mcp-server -h`/`--help` and `--version` are handled before configuration is read, exit 0, and print to stderr (usage lists the stdio transport, the four required `CUBRID_*` variables, and docs links; version uses the package `__version__`). Unrecognized arguments exit 2 with an argparse error on stderr. README and Troubleshooting mention the flags.
+
+### Documentation
+
+- **README and docs site show the transparent brand icon (#494)** — the icon URL pinned in the README, its translations and `mkdocs.yml` (logo and favicon) now points at brand revision `e55990a`, where the MCP icon's three-way router is real transparency instead of white paint. Documentation only; behavior is unchanged.
+
+### Tests
+
+- **schema_definitions rejects an unknown table before any metadata query (#329)** — a unit
+  test calls `schema_definitions` with a table missing from the catalog and asserts the
+  `ValueError` and that only the table-name lookup ran. Test-only; the server is unchanged.
+
 ## [0.7.0] - 2026-10-27
 
 ### Added
